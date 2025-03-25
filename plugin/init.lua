@@ -195,7 +195,7 @@ function M.apply_to_config(config, _)
 
     -- Panes
     {
-      key = "|",
+      key = "\\",
       mods = "LEADER",
       action = act.SplitHorizontal({
         domain = "CurrentPaneDomain" })
