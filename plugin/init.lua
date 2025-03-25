@@ -173,8 +173,8 @@ M.action = {
 ---@param _ { }
 function M.apply_to_config(config, _)
   if not config.leader then
-    config.leader = { key = "b", mods = "CTRL" }
-    wezterm.log_warn("No leader key set, using default: Ctrl-b")
+    config.leader = { key = "a", mods = "CTRL" }
+    wezterm.log_warn("No leader key set, using default: Ctrl-a")
   end
 
   local keys = {
@@ -195,13 +195,13 @@ function M.apply_to_config(config, _)
 
     -- Panes
     {
-      key = "%",
+      key = "-",
       mods = "LEADER",
       action = act.SplitHorizontal({
         domain = "CurrentPaneDomain" })
     },
     {
-      key = "\"",
+      key = "|",
       mods = "LEADER",
       action = act.SplitVertical({
         domain = "CurrentPaneDomain" })
